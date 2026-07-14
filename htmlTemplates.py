@@ -24,6 +24,31 @@ css = '''
   padding: 0 1.5rem;
   color: #fff;
 }
+.citations {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background-color: #3a4256;
+    border-radius: 0.35rem;
+    font-size: 0.85rem;
+    color: #b0b8c8;
+}
+.citations strong {
+    color: #8a9bba;
+}
+.citation-item {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #4a5368;
+}
+.citation-item:last-child {
+    border-bottom: none;
+}
+.eval-metric {
+    padding: 0.5rem 1rem;
+    background-color: #2b313e;
+    border-radius: 0.35rem;
+    margin-bottom: 0.5rem;
+}
+</style>
 '''
 bot_template = '''
 <div class="chat-message bot">
@@ -39,7 +64,13 @@ user_template = '''
     <div class="message" style="text-align:right">{{MSG}}</div>
     <div class="avatar">
         <img src="https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-users-icon-png-image_856952.jpg">
-    </div>    
-    
+    </div>
+</div>
+'''
+
+citation_template = '''
+<div class="citations">
+    <strong>Sources:</strong>
+    {{CITATIONS}}
 </div>
 '''
